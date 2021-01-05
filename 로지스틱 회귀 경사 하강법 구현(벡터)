@@ -1,0 +1,9 @@
+Z = w.T*X+b = np.dot(w.T,X)+b
+A = sigmoid(Z)
+dZ = A - Y
+dw = (1/m)*X*d(Z.T)
+db = (1/m)*np.sum(dZ)
+
+w:= w-adw
+b:= b-adb
+#a는 
