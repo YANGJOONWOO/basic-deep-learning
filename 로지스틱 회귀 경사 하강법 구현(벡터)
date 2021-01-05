@@ -1,9 +1,11 @@
-Z = w.T*X+b = np.dot(w.T,X)+b
-A = sigmoid(Z)
-dZ = A - Y
-dw = (1/m)*X*d(Z.T)
-db = (1/m)*np.sum(dZ)
 
-w:= w-adw
-b:= b-adb
-#a는 
+for ? in range ? #몇번 경사하강법을 반복할 것인지 --> 제일 바깥쪽에 위치한 for loop이며 이건 벡터화할 수 
+  Z = w.T*X+b = np.dot(w.T,X)+b
+  A = sigmoid(Z)
+  dZ = A - Y
+  dw = (1/m)*X*d(Z.T)
+  db = (1/m)*np.sum(dZ)
+
+  w:= w-adw
+  b:= b-adb
+  #a는 
