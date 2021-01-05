@@ -1,0 +1,22 @@
+# 시간함수
+import time
+
+#백만 차원의 랜덤 백터값
+a = np.random.rand(1000000)
+b = np.random.rand(1000000)
+
+#백터 계산
+tic = time.time()
+c = np.dot(a,b)
+toc = time.time()
+
+print("vectorized version:" + str(1000*(toc-tic))+"ms")
+
+#벡터가 아닌 for loop로 계산
+c = 0
+tic = time.time()
+for i in range(1000000):
+  c +=a[i]+b[i]
+toc = time.time()
+
+print("for loop:" + str(1000*(toc-tic)) + "ms")
