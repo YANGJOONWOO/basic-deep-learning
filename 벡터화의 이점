@@ -10,6 +10,7 @@ tic = time.time()
 c = np.dot(a,b)
 toc = time.time()
 
+#벡터일 때 연산 시간 출력
 print("vectorized version:" + str(1000*(toc-tic))+"ms")
 
 #벡터가 아닌 for loop로 계산
@@ -19,4 +20,5 @@ for i in range(1000000):
   c +=a[i]+b[i]
 toc = time.time()
 
+#for loop로 계산한 연산 시간 
 print("for loop:" + str(1000*(toc-tic)) + "ms")
